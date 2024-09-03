@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: p955hlp2y-go-gitops
+  description: This is GitOps manifest for p955hlp2y-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: p955hlp2y-go
+    jenkins.io/job-full-name: p955hlp2y-go-gitops
+    backstage.io/kubernetes-id: p955hlp2y-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:p955hlp2y-go
